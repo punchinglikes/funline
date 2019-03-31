@@ -23,6 +23,7 @@ while ca != 'Blank':
     elif ca == "help":
         print("Here are all of the commands")
         print("help :: shows this message")
+        print('version :: show program version')
         print("prefixchange :: change the prefix")
         print("test :: make sure everything is working.")
         print("quit :: quit the program")
@@ -56,6 +57,11 @@ while ca != 'Blank':
         answer = input('Just type "quit" when you would like to leave')
         if answer == 'quit':
             ca = action()
+
+        elif ca == 'version':
+            print(version)
+            ca = action()
+
         else:
             print('Wrong response, but I will assume that you wish to leave this boring screen.')
             ca = action()
