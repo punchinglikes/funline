@@ -19,6 +19,7 @@ while ca != 'Blank':
         print("help :: shows this message")
         print("prefixchange :: change the prefix")
         print("test :: make sure everything is working.")
+        prefix("quit :: quit the program")
         ca = action()
     elif ca == "prefixchange":
         request = input("What would you like to change the prefix to?: ")
