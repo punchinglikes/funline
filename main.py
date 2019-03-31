@@ -25,7 +25,9 @@ while ca != 'Blank':
         print("help :: shows this message")
         print("prefixchange :: change the prefix")
         print("test :: make sure everything is working.")
-        prefix("quit :: quit the program")
+        print("quit :: quit the program")
+        print("endlessloading :: show a endless loading screen")
+
         ca = action()
 
     elif ca == "prefixchange":
@@ -39,6 +41,23 @@ while ca != 'Blank':
         if answer == 'y':
             quit()
         else:
+            ca = action()
+
+    elif ca == 'endlessloading':
+        percent = random.randint(1, 99)
+        if percent < 25:
+            print("[###----------------] " + str(percent) + "%")
+        elif percent < 50 and percent > 25:
+            print('[########-----------] ' + str(percent) + '%')
+        elif percent < 75 and percent > 50:
+            print("[###############----] " + str(percent) + '%')
+        elif percent < 100 and percent > 75:
+            print('[##################-] ' + str(percent) + '%')
+        answer = input('Just type "quit" when you would like to leave')
+        if answer == 'quit':
+            ca = action()
+        else:
+            print('Wrong response, but I will assume that you wish to leave this boring screen.')
             ca = action()
 
     else:
