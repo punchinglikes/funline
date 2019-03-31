@@ -1,7 +1,7 @@
 from sys import *
 import random
 prefix = "funline >"
-verson = "1.0.0"
+version = "1.0.0"
 ca = 'Blank'
 
 def action():
@@ -58,13 +58,13 @@ while ca != 'Blank':
         if answer == 'quit':
             ca = action()
 
-        elif ca == 'version':
-            print(version)
-            ca = action()
-
         else:
             print('Wrong response, but I will assume that you wish to leave this boring screen.')
             ca = action()
+
+    elif ca == 'version':
+        print(version)
+        ca = action()
 
     else:
         print('Unknown command, please try again.')
