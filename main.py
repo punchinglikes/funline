@@ -54,7 +54,7 @@ while ca != 'Blank':
             print("[###############----] " + str(percent) + '%')
         elif percent < 100 and percent > 75:
             print('[##################-] ' + str(percent) + '%')
-        answer = input('Just type "quit" when you would like to leave')
+        answer = input('Just type "quit" when you would like to leave: ')
         if answer == 'quit':
             ca = action()
 
