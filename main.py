@@ -89,7 +89,7 @@ while ca != 'Blank':
         print('The last command entered was: ' + last)
         last = 'last'
         ca = action()
-
+    # To be made: a short adventure based game
     else:
         last = ca
         print('Unknown command, please try again.')

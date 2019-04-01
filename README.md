@@ -16,6 +16,17 @@ That's all...
 
 - To Be Continued...
 
+## Commands
+
+- help :: shows this message
+- version :: show program version
+- prefixchange :: change the prefix
+- test :: make sure everything is working
+- quit :: quit the program
+- endlessloading :: show a endless loading screen
+- guess :: guess the number
+- last :: show the last command entered
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
