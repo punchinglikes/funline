@@ -28,6 +28,7 @@ while ca != 'Blank':
         print("test :: make sure everything is working.")
         print("quit :: quit the program")
         print("endlessloading :: show a endless loading screen")
+        print('guess :: guess the number')
 
         ca = action()
 
@@ -60,6 +61,17 @@ while ca != 'Blank':
 
         else:
             print('Wrong response, but I will assume that you wish to leave this boring screen.')
+            ca = action()
+
+    elif ca == 'guess':
+        lives = 5 #Will come later in the version
+        guess = input('Im thinking of a number 1 through 100: ')
+        answer = random.randint(1, 100)
+        if guess == answer:
+            print('Congradulations! You got it correct! Returning to the main screen.')
+            ca = action()
+        else:
+            print('Sorry, You got it wrong. Going back to main screen.')
             ca = action()
 
     elif ca == 'version':
