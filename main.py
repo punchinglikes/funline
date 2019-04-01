@@ -3,7 +3,7 @@ import random
 prefix = "funline >"
 version = "1.0.0"
 ca = 'Blank'
-
+last = 'Nothing'
 def action():
     print(' ')
     action = input(prefix)
@@ -17,10 +17,12 @@ while ca == 'Blank':
 while ca != 'Blank':
 
     if ca == 'test':
+        last = 'test'
         print('This works!')
         ca = action()
 
     elif ca == "help":
+        last = 'help'
         print("Here are all of the commands")
         print("help :: shows this message")
         print('version :: show program version')
@@ -29,16 +31,18 @@ while ca != 'Blank':
         print("quit :: quit the program")
         print("endlessloading :: show a endless loading screen")
         print('guess :: guess the number')
-
+        print('last :: show the last command entered')
         ca = action()
 
     elif ca == "prefixchange":
+        last = 'prefixchange'
         request = input("What would you like to change the prefix to?: ")
         prefix = request
         print('Prefix changed to "' + prefix + '"')
         ca = action()
 
     elif ca == "quit":
+        last = 'quit'
         answer = input("Are you sure you want to quit [y/n]: ")
         if answer == 'y':
             quit()
@@ -46,6 +50,7 @@ while ca != 'Blank':
             ca = action()
 
     elif ca == 'endlessloading':
+        last = 'endlessloading'
         percent = random.randint(1, 99)
         if percent < 25:
             print("[###----------------] " + str(percent) + "%")
@@ -64,6 +69,7 @@ while ca != 'Blank':
             ca = action()
 
     elif ca == 'guess':
+        last = 'quess'
         lives = 5 #Will come later in the version
         guess = input('Im thinking of a number 1 through 100: ')
         answer = random.randint(1, 100)
@@ -75,9 +81,16 @@ while ca != 'Blank':
             ca = action()
 
     elif ca == 'version':
+        last = 'version'
         print(version)
         ca = action()
 
+    elif ca == 'last':
+        print('The last command entered was: ' + last)
+        last = 'last'
+        ca = action()
+
     else:
+        last = ca
         print('Unknown command, please try again.')
         ca = action()
