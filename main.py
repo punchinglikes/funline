@@ -23,16 +23,16 @@ while ca != 'Blank':
 
     elif ca == "help":
         last = 'help'
-        print("Here are all of the commands")
-        print("help :: shows this message")
-        print('version :: show program version')
-        print("prefixchange :: change the prefix")
-        print("test :: make sure everything is working.")
-        print("quit :: quit the program")
-        print("endlessloading :: show a endless loading screen")
-        print('guess :: guess the number')
-        print('last :: show the last command entered')
-        print('dice :: make a random dice roll')
+        print("Here are all of the commands\n\n")
+        print(" help :: shows this message")
+        print(' version :: show program version')
+        print(" prefixchange :: change the prefix")
+        print(" test :: make sure everything is working.")
+        print(" quit :: quit the program")
+        print(" endlessloading :: show a endless loading screen")
+        print(' guess :: guess the number')
+        print(' last :: show the last command entered')
+        print(' dice :: make a random dice roll')
         ca = action()
 
     elif ca == "prefixchange":
