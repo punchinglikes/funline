@@ -26,6 +26,7 @@ That's all...
 - endlessloading :: show a endless loading screen
 - guess :: guess the number
 - last :: show the last command entered
+- dice :: make a random dice roll
 
 ## Contributing
 
