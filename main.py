@@ -32,6 +32,7 @@ while ca != 'Blank':
         print("endlessloading :: show a endless loading screen")
         print('guess :: guess the number')
         print('last :: show the last command entered')
+        print('dice :: make a random dice roll')
         ca = action()
 
     elif ca == "prefixchange":
@@ -89,7 +90,14 @@ while ca != 'Blank':
         print('The last command entered was: ' + last)
         last = 'last'
         ca = action()
-    # To be made: a short adventure based game
+
+    elif ca == 'dice':
+        last = 'dice'
+        number = input('What should the dice go up to? (ex. 6)? ')
+        roll = random.randint(1, int(number))
+        print('The roll was ' + str(roll))
+        ca = action()
+    
     else:
         last = ca
         print('Unknown command, please try again.')
